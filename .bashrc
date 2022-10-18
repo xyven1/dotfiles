@@ -1,5 +1,6 @@
 # manage ssh-agent
 SSH_ENV="$HOME/.ssh/agent-environment"
+mkdir -p "$HOME/.ssh/"
 
 function start_agent {
     echo "Initialising new SSH agent..."
