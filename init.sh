@@ -19,4 +19,5 @@ echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
 cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf plugin add {}
 asdf install
+cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf global {} latest
 rm -rf ~/.temp_init
