@@ -6,7 +6,7 @@ cd ~/.temp_init
 cat .tool-versions >> ~/.tool-versions
 cat .bashrc >> ~/.bashrc
 cat .bash_aliases >> ~/.bash_aliases
-
+cat .envrc >> /.envrc
 
 rm -rf ~/.asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
