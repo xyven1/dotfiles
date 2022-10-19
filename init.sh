@@ -7,7 +7,7 @@ cat .tool-versions >> ~/.tool-versions
 cat .bashrc >> ~/.bashrc
 cat .bash_aliases >> ~/.bash_aliases
 sudo touch /.envrc
-cat .envrc ? sudo tee -a /.envrc
+cat .envrc | sudo tee -a /.envrc
 
 rm -rf ~/.asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
