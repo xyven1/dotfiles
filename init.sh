@@ -6,6 +6,7 @@ cd ~/.temp_init
 cat .tool-versions >> ~/.tool-versions
 cat .bashrc >> ~/.bashrc
 cat .bash_aliases >> ~/.bash_aliases
+sudo touch /.envrc
 cat .envrc >> /.envrc
 
 rm -rf ~/.asdf
