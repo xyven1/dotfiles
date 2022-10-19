@@ -1,6 +1,3 @@
-# direnv
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
-
 # manage ssh-agent
 SSH_ENV="$HOME/.ssh/agent-environment"
 mkdir -p "$HOME/.ssh/"
