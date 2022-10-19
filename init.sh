@@ -23,3 +23,5 @@ cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf global {} l
 rm -rf ~/.temp_init
 
 asdf direnv setup --shell bash --version latest
+. ~/.bashrc
+. ~/.profile
