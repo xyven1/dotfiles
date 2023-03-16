@@ -19,7 +19,7 @@ echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
 cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf plugin add {}
 asdf install
-cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf global {} latest
+cat ~/.tool-versions | xargs -i asdf global {}
 rm -rf ~/.temp_init
 
 asdf direnv setup --shell bash --version latest
