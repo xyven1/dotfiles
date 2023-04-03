@@ -1,4 +1,3 @@
-#!/bin/bash -i
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential git -y
 
