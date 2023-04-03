@@ -1,5 +1,5 @@
 FILE=~/.tool-versions
-if ! command -v <the_command> &> /dev/null
+if command -v asdf &> /dev/null
 then
   asdf update
 
