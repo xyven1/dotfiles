@@ -19,17 +19,17 @@ if ! [[ -f $FILE ]]; then
 fi
 echo "Please source .bashrc and then run this command again"
   
-if command -v asdf &> /dev/null
+if ! command -v asdf &> /dev/null
 then
-  asdf update
-
-  cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf plugin add {}
-  asdf install
-  cat ~/.tool-versions | xargs -l bash -c 'asdf global $0 $1'
-  rm -rf ~/.temp_init
-
-  asdf direnv setup --shell bash --version latest
-  echo "Done setting things up. Please restart your machine to get everything working"
-else
-  echo "'asdf' command not found, please make sure it is available"
+    echo "'asdf' command not found, please make sure it is available"
+    exit
 fi
+asdf update
+
+cat ~/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | xargs -i asdf plugin add {}
+asdf install
+cat ~/.tool-versions | xargs -l bash -c 'asdf global $0 $1'
+rm -rf ~/.temp_init
+
+asdf direnv setup --shell bash --version latest
+echo "Done setting things up. Please restart your machine to get everything working"
