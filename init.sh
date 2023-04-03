@@ -3,7 +3,7 @@ FILE=~/.tool-versions
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential git -y
 
-if [[ -f $FILE ]]; then
+if ! [[ -f $FILE ]]; then
   git clone https://github.com/Xyven1/dotfiles.git ~/.temp_init
   cd ~/.temp_init
   cat .tool-versions >> ~/.tool-versions
