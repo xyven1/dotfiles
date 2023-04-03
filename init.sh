@@ -19,8 +19,7 @@ if ! test -f $FILE; then
 fi
 echo "Please source .bashrc and then run this command again"
   
-if ! command -v asdf &> /dev/null
-then
+if ! [ -x "$(command -v asdf)" ]; then
     echo "'asdf' command not found, please make sure it is available"
     exit
 fi
